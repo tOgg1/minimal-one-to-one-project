@@ -1,14 +1,6 @@
 .PHONY: test
 test:
-	poetry run py.test
-
-.PHONY: test-cov
-test-cov:
-	poetry run py.test --cov=.
-
-.PHONY: test-watch
-test-watch:
-	poetry run ptw -- --testmon
+	poetry run python manage.py test
 
 .PHONY: migrate
 migrate:
